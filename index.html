@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    <div class="container" >
+        
+        <div class="img1">
+            <img src="exa.jpg" class="responsive"> 
+        </div>
+        <div class="menu">
+            <a href="#" class="a2">COVID</a>
+            <a href="#" class="a2">Visualizacion de Datos</a>
+            <a href="#" class="a2">Nuevo registro</a>
+        </div>
+    </div>
+    <div class="container3" >
+        <div class="recuperados">
+            <img class="img2" src="user.png">
+            <p class="texto-cuadros">Casos recuperados</p>
+            <p id="output" class="texto-cuadros" ></p>
+        </div>
+        <div class="fallecidos">
+            <img class="img2" src="user.png"> 
+            <p class="texto-cuadros">Casos fallecidos</p>
+            <p id="output1" class="texto-cuadros"></p>
+        </div>
+        <div class="na">
+            <img class="img2" src="user.png">
+            <p class="texto-cuadros">Casos N/A</p>
+            <p id="output2" class="texto-cuadros"></p>
+        </div>
+    </div>
+    <div class="container4" >
+        <section id="page">
+            <nav>
+                <form action="">
+                    <p >Ciudades:</p>
+                    <select name="cars" id="cars">
+                        <option value="volvo" selected class="o_Ciudad">Seleccione una opcion</option>
+                        <option value="volvo" class="o_Ciudad">Volvo</option>
+                    </select>
+                </form>
+            </nav>
+            <main>
+                <div class="tabla">
+                        <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Ciudad</th>
+                                <th>Edad</th>
+                                <th>Sexo</th>
+                                <th>Recuperado</th>
+                                <th>Tipo Recuperación</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Dignostico</th>
+                                <th>Tiempo de Dignostico</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo_tb">
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+          </section>
+
+        <div class="formulario">
+            
+        </div>
+        <div>
+            <button onclick="eliminarusuario()">
+                Eliminar Usuario
+            </button>
+        </div>
+
+        
+        
+    </div>
+
+
+    <script>
+        function eliminarusuario(){
+            fetch('http://192.168.0.100:5000/api/user/1',{method: 'DELETE'})
+            .then(res => res.json())
+            .then(data => {
+    })
+        }
+    </script>
+
+</body>
+</html>

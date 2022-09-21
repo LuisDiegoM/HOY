@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.img{
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    background-color: aqua;
+    padding: 10px;
+}
+
+.responsive{
+    width: 100%;
+    height: 200px;
+}
+
+.img1{
+    width: 100%;
+}
+
+.a2{
+    margin-right: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container3{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0px;
+}
+.recuperados,.fallecidos,.na{
+    width: 200px;
+    background-color: brown;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    border-radius: 10%;
+}
+
+.texto-cuadros{
+    color: white;
+    font-size: 16px;
+}
+
+.img2{
+    width: 100px;
+}
+.formulario{ 
+}
+
+.o_Ciudad{
+    display: block;
+    width: 100%;
+
+    display: 10px;
+    
+}
+
+/*-----------*/
+#page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+      "nav  main";
+    grid-template-rows: 400px 1fr 30px;
+    grid-template-columns: 200px 1fr;
+  }
+  
+  
+  #page > nav {
+    grid-area: nav;
+    background-color: #ffa08c;
+  }
+  
+  #page > main {
+    grid-area: main;
+    background-color: #d3d3c3;
+  }
+
